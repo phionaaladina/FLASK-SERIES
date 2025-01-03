@@ -5,9 +5,9 @@ class Book(db.Model):
     __tablename__ = 'books' 
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(150),nullable=False)
-    pages = db.Column(db.Integer(100),nullable=False)
-    price = db.Column(db.Integer(100),nullable=False)
-    price_unit = db.Column(db.String(100),nullable=False, default='UGX')
+    pages = db.Column(db.Integer(),nullable=False)
+    price = db.Column(db.Integer(),nullable=False)
+    price_unit = db.Column(db.String(50),nullable=False, default='UGX')
     publication_date = db.Column(db.Date,nullable=False)
     isbn = db.Column(db.String(30), nullable=False, unique=True)
     genre = db.Column(db.String(50), nullable=False)
